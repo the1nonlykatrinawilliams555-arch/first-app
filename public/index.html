@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="First App is running and ready for development in Alloy." />
+    <title>First App | Ready to Build</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f4f1e8;
+        color: #17332d;
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      main {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
+        padding: 24px clamp(20px, 5vw, 72px);
+      }
+
+      header,
+      footer,
+      .hero {
+        width: min(1180px, 100%);
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border: 1px solid #b9c2ac;
+        border-radius: 999px;
+        background: #fbfaf5;
+        color: #36534b;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #2f7a59;
+        box-shadow: 0 0 0 4px #dce8d6;
+      }
+
+      .hero {
+        display: grid;
+        align-items: center;
+        grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+        gap: clamp(40px, 8vw, 120px);
+        padding: 80px 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: #84620d;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(3.6rem, 9vw, 8.2rem);
+        font-weight: 400;
+        letter-spacing: -0.065em;
+        line-height: 0.84;
+      }
+
+      h1 span {
+        color: #b77d05;
+        font-style: italic;
+      }
+
+      .intro {
+        max-width: 620px;
+        margin: 28px 0 0;
+        color: #49615b;
+        font-size: clamp(1rem, 1.8vw, 1.25rem);
+        line-height: 1.7;
+      }
+
+      .card {
+        padding: 28px;
+        border: 1px solid #17332d;
+        background: #e8bd4f;
+        box-shadow: 10px 10px 0 #17332d;
+      }
+
+      .card-label {
+        margin: 0 0 32px;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .card strong {
+        display: block;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 1.05;
+      }
+
+      .card p {
+        margin: 16px 0 0;
+        line-height: 1.55;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #b9c2ac;
+        color: #5d706b;
+        font-size: 0.8rem;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 760px) {
+        main {
+          padding: 20px;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 52px;
+          padding: 64px 0;
+        }
+
+        h1 {
+          font-size: clamp(3.4rem, 18vw, 5.5rem);
+        }
+
+        .card {
+          max-width: 440px;
+        }
+
+        footer {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="brand">First App</div>
+        <div class="status"><span class="status-dot" aria-hidden="true"></span>System online</div>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Alloy workspace / 001</p>
+          <h1 id="page-title">Ready to <span>build.</span></h1>
+          <p class="intro">
+            The development environment is connected, containerized, and waiting for the first idea.
+            Start here, then shape it into something useful.
+          </p>
+        </div>
+
+        <aside class="card" aria-label="Environment status">
+          <p class="card-label">Environment</p>
+          <strong>Everything is in place.</strong>
+          <p>Node 22 · Docker Compose · Live workspace</p>
+        </aside>
+      </section>
+
+      <footer>
+        <p>Built to evolve, not to get in the way.</p>
+        <p>Running on port 3000</p>
+      </footer>
+    </main>
+  </body>
+</html>
