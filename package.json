@@ -1,0 +1,12 @@
+{
+  "name": "first-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small, dependency-free web app ready for Alloy sessions.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
